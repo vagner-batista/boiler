@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Roboto Thin';
+  src: url('../assets/fonts/Roboto-Thin.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto Thin Italic';
+  src: url('../assets/fonts/Roboto-ThinItalic.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto Italic';
+  src: url('../assets/fonts/Roboto-Regular.ttf');
+}
+@font-face {
+  font-family: 'Roboto Black';
+  src: url('../assets/fonts/Roboto-Black.ttf');
+}
+@font-face {
+  font-family: 'Roboto Black Italic';
+  src: url('../assets/fonts/Roboto-BlackItalic.ttf');
+}
+@font-face {
+  font-family: 'Poppins Thin';
+  src: url('../assets/fonts/Poppins-Light.ttf');
+}
+@font-face {
+  font-family: 'Poppins Bold';
+  src: url('../assets/fonts/Poppins-SemiBold.ttf');
+}
+
+@layer base {
+  :root {
+    font-size: calc(15px + 0.3925vw);
+    @apply font-poppins;
+    line-height: 2;
+    letter-spacing: 2;
+  }
+  .primaryButton {
+    @apply text-emerald-700;
+    @apply py-0 px-6 rounded-xl bg-second hover:bg-amber-500 active:bg-amber-600 active:text-teal-300 border-emerald-700 border-2;
+    @apply font-roboto-black;
+  }
+  .transition-timer {
+    transition: 'stroke-dashoffset 1s linear';
+  }
+
+  h1 {
+    font-size: 4rem;
+    @apply font-poppins text-prime  my-0 py-0;
+    line-height: 1.5;
+  }
+  h2 {
+    font-size: 3rem;
+    @apply font-poppins text-prime;
+  }
+  h3 {
+    font-size: 2rem;
+    @apply font-poppins text-prime;
+  }
+  h4 {
+    @apply font-poppins text-prime;
+    font-size: 1.5rem;
+  }
+  h5 {
+    font-size: 1.2rem;
+    @apply font-poppins;
+  }
+  h6 {
+    font-size: 1.1rem;
+    @apply font-poppins;
+  }
+  .container {
+    @apply snap-center px-10;
+  }
+  p {
+    @apply font-roboto;
+    font-size: 1.2rem;
+    line-height: 0.95;
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0) translate(-50%, -50%);
+  }
+  to {
+    transform: scale(1) translate(-50%, -50%);
+  }
+}
